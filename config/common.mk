@@ -198,3 +198,6 @@ $(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
 include vendor/faosp/config/version.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
+
+# Fonts
+include vendor/faosp/config/fonts.mk
