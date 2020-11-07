@@ -109,6 +109,10 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/getcap \
     system/bin/setcap
 
+# Disable RescueParty due to high risk of data loss
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.disable_rescue=true
+
 # Filesystems tools
 PRODUCT_PACKAGES += \
     fsck.ntfs \
