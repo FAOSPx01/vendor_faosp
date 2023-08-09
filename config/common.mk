@@ -87,10 +87,6 @@ PRODUCT_COPY_FILES += \
     vendor/faosp/prebuilt/common/etc/init/init.faosp-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.faosp-updater.rc
 endif
 
-# Config
-PRODUCT_PACKAGES += \
-    SimpleDeviceConfig
-
 # Extra tools in FAOSP
 PRODUCT_PACKAGES += \
     bash \
