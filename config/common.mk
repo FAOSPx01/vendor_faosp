@@ -241,6 +241,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/faosp/overlay/common
 
 PRODUCT_PACKAGES += \
+    AndroidBlackThemeOverlay \
     CustomFontPixelLauncherOverlay \
     DocumentsUIOverlay \
     NetworkStackOverlay \
