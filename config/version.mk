@@ -15,5 +15,4 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.faosp.version=$(FAOSP_VERSION) \
     ro.faosp.display.version=$(FAOSP_DISPLAY_VERSION) \
     ro.faosp.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.faosp.releasetype=$(FAOSP_BUILDTYPE) \
-    ro.modversion=$(FAOSP_VERSION)
+    ro.faosp.releasetype=$(FAOSP_BUILDTYPE)
