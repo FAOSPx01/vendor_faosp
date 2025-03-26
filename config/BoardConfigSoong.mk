@@ -62,14 +62,6 @@ SOONG_CONFIG_NAMESPACES += faospNvidiaVars
 SOONG_CONFIG_faospNvidiaVars += \
     uses_nvidia_enhancements
 
-SOONG_CONFIG_NAMESPACES += faospQcomVars
-
-# Only create display_headers_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
-ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
-SOONG_CONFIG_faospQcomVars += \
-    qcom_display_headers_namespace
-endif
-
 # Soong bool variables
 SOONG_CONFIG_faospGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_faospGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
@@ -124,8 +116,4 @@ SOONG_CONFIG_faospGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACE
 SOONG_CONFIG_faospGlobalVars_target_trust_usb_control_path := $(TARGET_TRUST_USB_CONTROL_PATH)
 SOONG_CONFIG_faospGlobalVars_target_trust_usb_control_enable := $(TARGET_TRUST_USB_CONTROL_ENABLE)
 SOONG_CONFIG_faospGlobalVars_target_trust_usb_control_disable := $(TARGET_TRUST_USB_CONTROL_DISABLE)
-ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
-SOONG_CONFIG_faospQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
-else
-SOONG_CONFIG_faospQcomVars_qcom_display_headers_namespace := $(QCOM_SOONG_NAMESPACE)/display
-endif
+
