@@ -92,7 +92,7 @@ PRODUCT_PACKAGES += \
     product_charger_res_images \
     product_charger_res_images_vendor
 
-ifeq ($(FAOSP_BUILDTYPE), OFFICIAL)
+ifeq ($(FAOSP_BUILD_TYPE), PRODUCTION-BUILD)
 # FAOSP packages
 PRODUCT_PACKAGES += \
     Updater
