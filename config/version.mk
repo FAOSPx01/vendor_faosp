@@ -8,3 +8,6 @@ FAOSP_VERSION := FAOSP-$(CURRENT_DEVICE)-OTA-$(FAOSP_BUILD_TYPE)-$(shell date -u
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.faosp.version=$(FAOSP_VERSION) \
     ro.faosp.releasetype=$(FAOSP_BUILD_TYPE)
+
+# Signing
+-include vendor/faosp/keys/keys.mk
